@@ -34,4 +34,8 @@ public class ArabicNumberConverterUT {
     public void itShouldReturn10_givenX(){
         Assert.assertEquals(10, RomanNumberConverter.toArabic("X"));
     }
+    @Test
+    public void itShouldReturn15_givenXV(){
+        Assert.assertEquals(15, RomanNumberConverter.toArabic("XV"));
+    }
 }
