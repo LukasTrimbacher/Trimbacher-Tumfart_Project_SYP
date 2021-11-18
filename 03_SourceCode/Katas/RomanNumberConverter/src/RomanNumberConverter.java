@@ -10,13 +10,16 @@ public class RomanNumberConverter {
         return romanNumber;
     }
     public static int toArabic(String romanNumber){
-        if(romanNumber == "V"){
-            return 5;
+        int arabic = 0;
+        for (int i = 0; i < romanNumber.length(); i++){
+            if(romanNumber.charAt(i) == 'V'){
+                arabic += 5;
+            }
+            else if (romanNumber.charAt(i) == 'I'){
+                arabic += 1;
+            }
         }
-        if (romanNumber == "III"){
-            return 3;
-        }
-        return romanNumber == "I" ? 1 : 2;
+        return arabic;
     }
 
     enum Numeral {

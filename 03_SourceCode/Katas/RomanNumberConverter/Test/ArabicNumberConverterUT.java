@@ -18,4 +18,8 @@ public class ArabicNumberConverterUT {
     public void itShouldReturn5_GivenV(){
         Assert.assertEquals(5, RomanNumberConverter.toArabic("V"));
     }
+    @Test
+    public void itShouldReturn6_givenVI(){
+        Assert.assertEquals(6, RomanNumberConverter.toArabic("VI"));
+    }
 }
