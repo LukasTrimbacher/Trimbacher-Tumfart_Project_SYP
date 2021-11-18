@@ -26,4 +26,8 @@ public class ArabicNumberConverterUT {
     public void itShouldReturn7_givenVII(){
         Assert.assertEquals(7, RomanNumberConverter.toArabic("VII"));
     }
+    @Test
+    public void itShouldReturn8_givenVIII(){
+        Assert.assertEquals(8, RomanNumberConverter.toArabic("VIII"));
+    }
 }
