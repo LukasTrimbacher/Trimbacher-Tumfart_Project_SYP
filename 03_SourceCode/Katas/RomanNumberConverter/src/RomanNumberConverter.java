@@ -12,7 +12,11 @@ public class RomanNumberConverter {
     public static int toArabic(String romanNumber){
         int arabic = 0;
         for (int i = 0; i < romanNumber.length(); i++){
-            if(romanNumber.charAt(i) == 'X'){
+            if (romanNumber.startsWith("IV")){
+                arabic += 4;
+                romanNumber = romanNumber.substring(2);
+            }
+            else if(romanNumber.charAt(i) == 'X'){
                 arabic += 10;
             }
             else if(romanNumber.charAt(i) == 'V'){
