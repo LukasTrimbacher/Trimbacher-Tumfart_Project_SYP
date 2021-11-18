@@ -42,4 +42,8 @@ public class ArabicNumberConverterUT {
     public void itShouldReturn4_givenIV(){
         Assert.assertEquals(4, RomanNumberConverter.toArabic("IV"));
     }
+    @Test
+    public void itShouldReturn9_givenIX(){
+        Assert.assertEquals(9, RomanNumberConverter.toArabic("IX"));
+    }
 }

@@ -10,20 +10,13 @@ public class RomanNumberConverter {
         return romanNumber;
     }
     public static int toArabic(String romanNumber){
-        int arabic = 0;
-        for (int i = 0; i < romanNumber.length(); i++){
-            if (romanNumber.startsWith("IV")){
-                arabic += 4;
-                romanNumber = romanNumber.substring(2);
-            }
-            else if(romanNumber.charAt(i) == 'X'){
-                arabic += 10;
-            }
-            else if(romanNumber.charAt(i) == 'V'){
-                arabic += 5;
-            }
-            else if (romanNumber.charAt(i) == 'I'){
-                arabic += 1;
+        var arabic = 0;
+        while(romanNumber.length() > 0){
+            for (var Numeral : Numeral.values()){
+                if (romanNumber.startsWith(Numeral.mRoman)){
+                    arabic += Numeral.mArabic;
+                    romanNumber = romanNumber.substring(Numeral.mRoman.length());
+                }
             }
         }
         return arabic;
