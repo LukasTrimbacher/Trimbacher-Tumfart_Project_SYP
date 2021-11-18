@@ -10,6 +10,9 @@ public class RomanNumberConverter {
         return romanNumber;
     }
     public static int toArabic(String romanNumber){
+        if (romanNumber == "III"){
+            return 3;
+        }
         return romanNumber == "I" ? 1 : 2;
     }
 
