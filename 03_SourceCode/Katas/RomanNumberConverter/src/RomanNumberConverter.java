@@ -9,6 +9,7 @@ public class RomanNumberConverter {
         }
         return romanNumber;
     }
+
     public static int toArabic(String romanNumber){
         var arabic = 0;
         while(romanNumber.length() > 0){
