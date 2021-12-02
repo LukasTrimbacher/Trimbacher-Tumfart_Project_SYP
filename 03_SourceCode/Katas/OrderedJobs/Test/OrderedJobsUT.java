@@ -88,6 +88,20 @@ public class OrderedJobsUT {
         // assert
         Assert.assertEquals("ABC", sut.getList());
     }
+    @Test
+    public void itShouldReturnABCD_GivenB_Depends_ON_A_And_C_Depends_ON_B_And_D_Depends_On_C(){
+        // arrange
+        var sut = new JobsScheduler();
+        sut.registerJob("C","B");
+        sut.registerJob("B", "A");
+        sut.registerJob("D", "C");
+
+        // act
+        sut.sort();
+
+        // assert
+        Assert.assertEquals("ABCD", sut.getList());
+    }
 
     @Test
     public void itShouldReturnBA_GivenBA() {
