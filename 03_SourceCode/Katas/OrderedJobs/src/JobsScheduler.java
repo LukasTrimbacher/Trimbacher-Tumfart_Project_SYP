@@ -37,9 +37,21 @@ public class JobsScheduler {
         Job job3 = containsJob(job, independentJobs);
         if (job3 == null){
             independentJobs.add(job);
-            job.add(job2);
+            Job job4 = containsJob(job2, independentJobs);
+            if(independentJobs.contains(job4)){
+                independentJobs.remove(job4);
+                job.add(job4);
+            }
+            else{
+                job.add(job2);
+            }
         }
         else{
+            Job job4 = containsJob(job2, independentJobs);
+            if(independentJobs.contains(job4)){
+                independentJobs.remove(job4);
+                job3.add(job4);
+            }
             job3.add(job2);
         }
     }
