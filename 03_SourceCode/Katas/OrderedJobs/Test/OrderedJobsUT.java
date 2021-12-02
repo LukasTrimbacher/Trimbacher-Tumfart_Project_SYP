@@ -74,6 +74,7 @@ public class OrderedJobsUT {
         // assert
         Assert.assertEquals("AB", sut.getList());
     }
+
     @Test
     public void itShouldReturnABC_GivenB_Depends_ON_A_And_C_Depends_ON_B(){
         // arrange
