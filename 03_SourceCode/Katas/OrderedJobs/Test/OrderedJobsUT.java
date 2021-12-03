@@ -103,6 +103,7 @@ public class OrderedJobsUT {
         Assert.assertEquals("ABCD", sut.getList());
     }
 
+
     @Test
     public void itShouldReturnBA_GivenBA() {
         // arrange
